@@ -16,7 +16,7 @@ postgres:
   name: cf-db-data
 
 core:
-  repository: exadel/compreface-core
+  repository: us-docker.pkg.dev/teknoir/gcr.io/compreface-core
   pullPolicy: Always
   tag: latest
   port: 3000
@@ -24,7 +24,7 @@ core:
   name: cf-core
 
 api:
-  repository: exadel/compreface-api
+  repository: us-docker.pkg.dev/teknoir/gcr.io/compreface-api
   pullPolicy: Always
   tag: latest
   port: 8080
@@ -32,7 +32,7 @@ api:
   name: cf-api
 
 admin:
-  repository: exadel/compreface-admin
+  repository: us-docker.pkg.dev/teknoir/gcr.io/compreface-admin
   pullPolicy: Always
   tag: latest
   port: 8080
@@ -40,7 +40,7 @@ admin:
   name: cf-admin
 
 fe:
-  repository: exadel/compreface-fe
+  repository: us-docker.pkg.dev/teknoir/gcr.io/compreface-fe
   pullPolicy: Always
   tag: latest
   port: 80
