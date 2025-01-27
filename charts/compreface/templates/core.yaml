@@ -24,9 +24,6 @@ spec:
           - containerPort: {{ .Values.core.port }}
           name: {{ .Values.core.name }}
           command: [ "uwsgi", "--ini", "uwsgi.ini", "--buffer-size=83146" ]
-          args:
-              - |-
-                {{ tpl .Values.core.containerArgs . | nindent 16 }}
           env:
             - name: ML_PORT
               value: "{{ .Values.core.port }}"
@@ -36,6 +33,16 @@ spec:
               value: "2"
             - name: UWSGI_THREADS
               value: "1"
+            - name: FACE_DETECTION_PLUGIN
+              value: "insightface.FaceDetector@retinaface_r50_v1"
+            - name: CALCULATION_PLUGIN
+              value: "insightface.Calculator@arcface_r100_v1"
+            - name: EXTRA_PLUGINS
+              value: "insightface.LandmarksDetector,insightface.GenderDetector,insightface.AgeDetector"
+            - name: BASE_IMAGE
+              value: "compreface-core-base:base-cuda100-py37"
+            - name: GPU_IDX
+              value: "0"
       restartPolicy: Always
 
 ---
