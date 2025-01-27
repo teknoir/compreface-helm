@@ -35,9 +35,12 @@ metadata:
   annotations:
     {{- toYaml $.Values.annotations | nindent 4 }}
 spec:
-  type: LoadBalancer
+  type: {{ if .Values.fe.nodePort.enabled }}NodePort{{ else }}LoadBalancer{{ end }}
   ports:
     - port: 8000
       targetPort: {{ .Values.fe.port }}
+      {{- if .Values.fe.nodePort.enabled }}
+      nodePort: {{ .Values.fe.nodePort.port }}
+      {{- end }}
   selector:
     app: fe
