@@ -22,6 +22,9 @@ spec:
           name: {{ .Values.fe.name }}
           ports:
             - containerPort: {{ .Values.fe.port }}
+          env:
+            - name: CLIENT_MAX_BODY_SIZE
+              value: '10M'
       restartPolicy: Always
 
 ---

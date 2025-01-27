@@ -48,4 +48,4 @@ fe:
   name: cf-fe
   nodePort:
     enabled: false
-    port: 31017
+    port: 31580
