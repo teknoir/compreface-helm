@@ -3,6 +3,16 @@ entries:
   compreface:
   - apiVersion: v2
     appVersion: 1.2.0
+    created: "2025-01-27T18:51:12.980475924Z"
+    description: A Helm chart for CompreFace
+    digest: 73fbb3ec222d718b63bdeee7447876a12a66b023b203761db6085e42baaa8fc8
+    name: compreface
+    type: application
+    urls:
+    - https://github.com/teknoir/compreface-helm/releases/download/compreface-0.0.13/compreface-0.0.13.tgz
+    version: 0.0.13
+  - apiVersion: v2
+    appVersion: 1.2.0
     created: "2025-01-27T18:28:03.388209513Z"
     description: A Helm chart for CompreFace
     digest: bfd06de333c037258535932763f5e989aea95e9e5ec2f42ecdef50adcb8222ee
@@ -111,4 +121,4 @@ entries:
     urls:
     - https://github.com/teknoir/compreface-helm/releases/download/compreface-0.0.2/compreface-0.0.2.tgz
     version: 0.0.2
-generated: "2025-01-27T18:28:03.388256055Z"
+generated: "2025-01-27T18:51:12.98052673Z"
