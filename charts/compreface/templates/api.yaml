@@ -34,7 +34,7 @@ spec:
             - name: MAX_FILE_SIZE
               value: '5MB'
             - name: MAX_REQUEST_SIZE
-              value: '10M'
+              value: '10MB'
             - name: CONNECTION_TIMEOUT
               value: '10000'
             - name: READ_TIMEOUT
