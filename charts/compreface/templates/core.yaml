@@ -20,6 +20,7 @@ spec:
       runtimeClassName: nvidia
       containers:
         - image: {{ .Values.core.repository }}:{{ .Values.core.tag }}
+          imagePullPolicy: Always
           ports:
           - containerPort: {{ .Values.core.port }}
           name: {{ .Values.core.name }}

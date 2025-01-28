@@ -43,6 +43,7 @@ spec:
             - name: READ_TIMEOUT
               value: '60000'
           image: '{{ .Values.admin.repository }}:{{ .Values.admin.tag }}'
+          imagePullPolicy: Always
           ports:
           - containerPort: {{ .Values.admin.port }}
           name: {{ .Values.admin.name }}

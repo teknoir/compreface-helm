@@ -29,6 +29,7 @@ spec:
             - name: POSTGRES_USER
               value: {{ .Values.postgres.db_user }}
           image: {{ .Values.postgres.repository }}:{{ .Values.postgres.tag }}
+          imagePullPolicy: Always
           name: cf-db
           ports:
           - containerPort: {{ .Values.postgres.db_port }}
