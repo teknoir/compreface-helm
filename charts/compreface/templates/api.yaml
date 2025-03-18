@@ -55,8 +55,11 @@ metadata:
   annotations:
     {{- toYaml $.Values.annotations | nindent 4 }}
 spec:
-  type: ClusterIP
+  type: {{ if .Values.api.nodePort.enabled }}NodePort{{ else }}LoadBalancer{{ end }}
   selector:
       app: api
   ports:
   - port: {{ .Values.api.port }}
+    {{- if .Values.api.nodePort.enabled }}
+    nodePort: {{ .Values.api.nodePort.port }}
+    {{- end }}

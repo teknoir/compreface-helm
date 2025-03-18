@@ -30,6 +30,9 @@ api:
   port: 8080
   replicas: 1
   name: cf-api
+  nodePort:
+    enabled: false
+    port: 31680
 
 admin:
   repository: us-docker.pkg.dev/teknoir/gcr.io/compreface-admin
@@ -38,6 +41,9 @@ admin:
   port: 8080
   replicas: 1
   name: cf-admin
+  nodePort:
+    enabled: false
+    port: 31480
 
 fe:
   repository: us-docker.pkg.dev/teknoir/gcr.io/compreface-fe
