@@ -40,7 +40,7 @@ spec:
       volumes:
         - name: db
           hostPath:
-            path: /opt/teknoir/compreface/postgres
+            path: {{ $.Values.postgres.hostPath }}
             type: DirectoryOrCreate
 
 ---
